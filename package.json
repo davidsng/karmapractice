@@ -1,0 +1,25 @@
+{
+  "name": "karmapractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start my.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.2.0",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-browserify": "^4.4.2",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-mocha": "^0.2.1",
+    "karma-sauce-launcher": "^0.3.0",
+    "karma-sinon-chai": "^1.1.0",
+    "mocha": "^2.3.4"
+  }
+}
