@@ -2,6 +2,7 @@
 // Generated on Thu Jan 07 2016 10:47:41 GMT+0800 (SGT)
 
 module.exports = function(config) {
+
   var customLaunchers = {
   sl_chrome: {
     base: 'SauceLabs',
@@ -33,9 +34,10 @@ module.exports = function(config) {
       testName: 'Web App Unit Tests'
     },
     customLaunchers: customLaunchers,
-    browsers: Object.keys(customLaunchers),
+    browsers: process.env.CI ? Object.keys(customLaunchers) : ['Chrome'],
     reporters: ['dots', 'saucelabs'],
     singleRun: true,
+
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -80,7 +82,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    // reporters: ['progress'],
 
 
     // web server port
@@ -102,12 +104,12 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    // browsers: ['Chrome'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    // singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
